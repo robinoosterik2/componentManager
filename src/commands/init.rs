@@ -1,5 +1,6 @@
-use inquire::{MultiSelect, CustomUserError};
+use inquire::MultiSelect;
 use std::fs;
+use std::path::PathBuf;
 use crate::config::ProjectConfig;
 use crate::utils::{SUPPORTED_FRAMEWORKS, SUPPORTED_STYLES, SUPPORTED_LANGUAGES};
 
@@ -45,6 +46,7 @@ pub fn init_config() {
 		framework: selected_framework,
 		style: selected_style,
 		language: selected_language,
+		components_dir: PathBuf::from("./components"),
 	};
 
 	let toml_string = toml::to_string(&config)
