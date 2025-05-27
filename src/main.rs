@@ -2,7 +2,7 @@ mod commands;
 mod config;
 mod utils;
 
-use clap::{Parser, Subcommand, Args};
+use clap::{Parser, Subcommand};
 use commands::{
     export::export_component, 
     import::import_component, 
