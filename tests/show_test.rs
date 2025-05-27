@@ -93,7 +93,7 @@ fn test_show_components() {
     );
     assert!(
         stdout.contains("react/tailwind/Button"),
-        "Expected 'test button component' in output, got: {}",
+        "Expected 'react/tailwind/Button' in output, got: {}",
         stdout
     );
     assert!(
